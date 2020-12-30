@@ -40,6 +40,7 @@ make build
 
 ## Results
 </br>
+![System Monitor](images/monitor.PNG)
 
 ## Future Work 
 
