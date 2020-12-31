@@ -16,9 +16,9 @@ float Processor::Utilization() {
         cpu_utilization.push_back(std::stol(value));
     }
     
-    long idle = cpu_utilization[4] + cpu_utilization[5]; //idle + iowait
+    long idle = cpu_utilization[3] + cpu_utilization[4]; //idle + iowait
     //user + nice + system + irq + softirq + steal;
-    long nonidle = cpu_utilization[1] + cpu_utilization[2] + cpu_utilization[3] + cpu_utilization[6] + cpu_utilization[7] + cpu_utilization[8];
+    long nonidle = cpu_utilization[0] + cpu_utilization[1] + cpu_utilization[2] + cpu_utilization[3] + cpu_utilization[4] + cpu_utilization[5];
 
     // Review how to obtain these data
     long pre_idle = 0;
